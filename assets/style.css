@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+/*    --  Container Styling --    */
+
+.container {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+/*    --  Navbar Styling  --      */
+
+.container #navbar {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 100vh;
+  padding: 0 30px;
+}
+
+.container #navbar header h2 {
+  color: white;
+  margin: 30px 0;
+  font-weight: 300;
+}
+
+.container #navbar ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
+}
+
+.container #navbar ul li {
+  margin-bottom: 17px;
+  display: block;
+  width: 100%;
+}
+
+.container #navbar ul li::after {
+  content: "";
+  width: 0%;
+  display: block;
+  transition: all 0.5s;
+  border-bottom: 3px solid rgb(40, 117, 218);
+  margin-top: 2px;
+}
+
+.container #navbar ul li:hover::after {
+  width: 100%;
+}
+
+.container #navbar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.container #main-doc {
+  padding: 30px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.container #main-doc .main-section h1 {
+  margin-bottom: 20px;
+  font-size: 1.7em;
+  font-weight: 300;
+}
+
+.container #main-doc .main-section article > * {
+  color: rgb(82, 82, 82);
+  font-size: 0.9em;
+  line-height: 140%;
+}
+
+.container #main-doc .main-section article p {
+  margin-bottom: 12px;
+  margin-left: 10px;
+}
+
+.container #main-doc .main-section article p code {
+  display: block;
+  padding: 12px;
+  background-color: rgb(58, 58, 58);
+  color: rgb(214, 214, 214);
+  margin: 12px 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+/*    -- List Styling --     */
+.container #main-doc .main-section ul {
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+/*    --  BreakLine Styling --     */
+.container .break-line {
+  padding: 50px;
+}
+
+.container .break-line hr {
+  border-top: 1px solid #dfdfdf;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .container #navbar {
+    display: none;
+  }
+
+  .container #main-doc {
+    padding: 30px 15px;
+  }
+
+  .container #main-doc .main-section article p code {
+    font-size: 0.85em;
+  }
+}
