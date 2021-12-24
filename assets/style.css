@@ -47,6 +47,10 @@ body {
   width: 100%;
 }
 
+.container #navbar ul li.active::after {
+  width:100%;
+}
+
 .container #navbar ul li::after {
   content: "";
   width: 0%;
