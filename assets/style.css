@@ -13,9 +13,10 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 25% 1fr;
+  grid-template-columns: 1fr;
   height: 100vh;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 /*    --  Navbar Styling  --      */
@@ -26,6 +27,8 @@ body {
   background-color: black;
   height: 100vh;
   padding: 0 30px;
+  position: fixed;
+  top: 0px;
 }
 
 .container #navbar header h2 {
@@ -48,7 +51,7 @@ body {
 }
 
 .container #navbar ul li.active::after {
-  width:100%;
+  width: 100%;
 }
 
 .container #navbar ul li::after {
@@ -71,8 +74,10 @@ body {
 
 .container #main-doc {
   padding: 30px;
-  overflow-y: scroll;
   scroll-behavior: smooth;
+  position: absolute;
+  width: 75%;
+  right: 0;
 }
 
 .container #main-doc .main-section h1 {
@@ -128,6 +133,9 @@ body {
 
   .container #main-doc {
     padding: 30px 15px;
+    width: calc(100% - 30px);
+    position: static;
+    right: 0;
   }
 
   .container #main-doc .main-section article p code {
